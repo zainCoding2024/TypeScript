@@ -1,4 +1,4 @@
-let admin:string[] = ['Ahmed','Usman','Zahid','Yasir','Bilal','admin']
+const admin:string[] = ['Ahmed','Usman','Zahid','Yasir','Bilal','admin']
 
 for(let i=0; i<admin.length;i++ ){
 

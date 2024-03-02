@@ -8,4 +8,4 @@ while(Guest_list[i]){
 i++;
 }
 
-console.log(text);
+console.log(text); 
