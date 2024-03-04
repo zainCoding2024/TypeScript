@@ -1,61 +1,46 @@
- let guest_list: string[] = ['Usman','Ahmed','Fawad']
+let guest:string[] = ['Zahid','Anwar','Jawaid']
 
- for(let i=0; i<guest_list.length; i++){
-   console.log(`${guest_list[i]} is invited.`)
+for(let i=0; i<guest.length; i++){
+    guest[i]
+  console.log(guest[i])
 }
-console.log(guest_list[1] + ",is not participating in the invitation.")
 
-console.log("Now..")
-
-guest_list[1] = "Kashan";
-
- let i=0;
- while(guest_list[i]){
-
- console.log(guest_list[i] +", Invited.");
-  i++;
+for(let i=0; i<guest.length; i++){
+    if(guest[i] === 'Anwar'){
+console.log(`\n Absent Guest...${guest[i]}`)
+const Absent = guest[i];
+    guest[i] = 'Iqbal';
+console.log(`${Absent}, is replaced by ${guest[i]}.`)
+    }
 }
-console.log("\nI found a bigger dinner table.")
+console.log(`\n Our new guest list...`)
+for(let i=0; i<guest.length; i++){
+    console.log(guest[i]+", is invited")
+}
 
-guest_list.unshift('Gul_Ahmed');
-guest_list.splice(1,0, "Burhan");
-guest_list.push("Haider")
-
- guest_list;
-
-  i=0;
- while(guest_list[i]){
-console.log(guest_list[i]+ ",is invited.")
-  i++;
-  
- }
-
-console.log("\ni can invite only two people.")
+console.log(`\nI found a bigger dinner table.`)
+guest.unshift("Daniyal")
+guest.splice(2,0,"Waqar");
+guest.push("Samad")
 
 
-let result:any = "";
- function invited(gst:any){
-for (let i=0; i< 4;){
+for(let i=0; i<guest.length; i++){
+    console.log(guest[i]+ ",is invited.")
+}
 
- console.log(gst.pop()+",sorry i can't invite you for the dinner.");
+console.log(`\nI can invite only two people.`)
 
- i++;
+while(guest.length>2){
+  let remGuest =  guest.pop()
+  if(remGuest){
+    console.log(`Sorry! ${remGuest}, you are no longer invited to dinner.`)
   }
-
-for (let i=0; i<gst.length;){
- 
- console.log((gst[i]+", is invited."));
-  i++;
 }
 
-for(let i=0; i<gst.length;){
-  gst.pop();
-  i++;
-  console.log(guest_list.splice(0,0))
+for(let i=0; i<guest.length; i++){
+    console.log(guest[i]+", is invited.")
+}
 
-} 
+guest.splice(0,2);
 
- }
-
- invited(guest_list);
- 
+console.log(guest);

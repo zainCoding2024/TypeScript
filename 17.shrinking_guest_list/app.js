@@ -1,40 +1,36 @@
-var guest_list = ['Usman', 'Ahmed', 'Fawad'];
-for (var i_1 = 0; i_1 < guest_list.length; i_1++) {
-    console.log("".concat(guest_list[i_1], " is invited."));
+var guest = ['Zahid', 'Anwar', 'Jawaid'];
+for (var i = 0; i < guest.length; i++) {
+    guest[i];
+    console.log(guest[i]);
 }
-console.log(guest_list[1] + ",is not participating in the invitation.");
-console.log("Now..");
-guest_list[1] = "Kashan";
-var i = 0;
-while (guest_list[i]) {
-    console.log(guest_list[i] + ", Invited.");
-    i++;
+for (var i = 0; i < guest.length; i++) {
+    if (guest[i] === 'Anwar') {
+        console.log("\n Absent Guest...".concat(guest[i]));
+        var Absent = guest[i];
+        guest[i] = 'Iqbal';
+        console.log("".concat(Absent, ", is replaced by ").concat(guest[i], "."));
+    }
+}
+console.log("\n Our new guest list...");
+for (var i = 0; i < guest.length; i++) {
+    console.log(guest[i] + ", is invited");
 }
 console.log("\nI found a bigger dinner table.");
-guest_list.unshift('Gul_Ahmed');
-guest_list.splice(1, 0, "Burhan");
-guest_list.push("Haider");
-guest_list;
-i = 0;
-while (guest_list[i]) {
-    console.log(guest_list[i] + ",is invited.");
-    i++;
+guest.unshift("Daniyal");
+guest.splice(2, 0, "Waqar");
+guest.push("Samad");
+for (var i = 0; i < guest.length; i++) {
+    console.log(guest[i] + ",is invited.");
 }
-console.log("\ni can invite only two people.");
-var result = "";
-function invited(gst) {
-    for (var i_2 = 0; i_2 < 4;) {
-        console.log(gst.pop() + ",sorry i can't invite you for the dinner.");
-        i_2++;
-    }
-    for (var i_3 = 0; i_3 < gst.length;) {
-        console.log((gst[i_3] + ", is invited."));
-        i_3++;
-    }
-    for (var i_4 = 0; i_4 < gst.length;) {
-        gst.pop();
-        i_4++;
-        console.log(guest_list.splice(0, 0));
+console.log("\nI can invite only two people.");
+while (guest.length > 2) {
+    var remGuest = guest.pop();
+    if (remGuest) {
+        console.log("Sorry! ".concat(remGuest, ", you are no longer invited to dinner."));
     }
 }
-invited(guest_list);
+for (var i = 0; i < guest.length; i++) {
+    console.log(guest[i] + ", is invited.");
+}
+guest.splice(0, 2);
+console.log(guest);
